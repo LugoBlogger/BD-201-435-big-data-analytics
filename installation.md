@@ -164,9 +164,16 @@ libraries
 6. Extract `hadoop-3.3.6` and put all the files inside it into 
    `C:\Users\[your user name]\hadoop\`.
 
+7. Copy `winutils.exe` and `hadoop.dll` from 
+   `C:\Users\[your user name]\hadoop\bin` to 
+   `C:\Users\[your user name]\spark\bin`
+
 ## Configure PySpark
+This configuration needs to be performed to be able to use
+`spark-submit` and writing a csv file.
 
 ### Python modules installation
+Open "Anaconda Prompt (Miniconda 3)" from the Start Menu. Then type
 
 ```
 conda activate learnPySpark
@@ -175,10 +182,34 @@ pip install pandas ipython ipykernel pyspark
 
 ### Environment variables settings
 
-```conf
-spark.driver.extraJavaOptions="-Dio.netty.tryReflectionSetAccessible=true"
-spark.executor.extraJavaOptions="-Dio.netty.tryReflectionSetAccessible=true"
-```
+We need to set the environment variables such that PySpark will automatically
+find the location of Spark program (including `winutils.exe`). To do that
+we need to add environment variables and add them to the `%PATH%`.
 
-Set the environment variables of Hadoop and PySpark 
+First we set the environment variables for Hadoop and Spark. 
 
+1. Type "Edit the system environment variables" in the "Start Menu" and click
+   the program.
+
+2. On the lower right part, there is a button "Environment Variables...".
+   Click this button, and we enter the dialog window of 
+   "Environment Variables" with two parts: User variables and System
+   variables.
+
+3. Create a new user variable by click "New..." in the upper part. 
+   Set the the variable name to be `HADOOP_HOME` and its value
+   "C:\Users\[your user name]\hadoop"
+
+4. Still in the same dialog windows when we are setting the environment
+   variables for hadoop, create a new user variable again now with the 
+   name and value
+
+   ```
+   Variable name: `SPARK_HOME`
+   Variable value: `C:\Users\[your user name]\spark`
+   ```
+
+5. Now, we add these paths of `HADOOP_HOME` and `SPARK_HOME` 
+   to the exsting `PATH` user variables. Click the `Path` and then
+   click "Edit...". Click "New" and add `%HADOOP_HOME%\bin` and
+   `%SPARK_HOME%\bin` into two separated rows.

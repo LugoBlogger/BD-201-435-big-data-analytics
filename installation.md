@@ -70,7 +70,7 @@ steps
    someone and it is not safe to install it.
 
 3. Double click to the Miniconda installer file 
-   (`iniconda3-latest-Windows-x86_64.exe`). During the installation, 
+   (`Miniconda3-latest-Windows-x86_64.exe`). During the installation, 
    use default setting.
 
 4. After installation finished, you can find a program with the name
@@ -102,7 +102,7 @@ the other extensions follows the same procedures.
 
    <img src="./img-resources/vscode-extension.png" width=400>
 
-2. In the "Searc box", type "Jupyter". Then left click to the blue button
+2. In the "Search box", type "Jupyter". Then left click to the blue button
    with "Install". If you have done the installation for this extension,
    that blue button will not appear. You can continue the same steps
    for the two others extensions.
@@ -179,6 +179,7 @@ Open "Anaconda Prompt (Miniconda 3)" from the Start Menu. Then type
 conda activate learnPySpark
 pip install pandas ipython ipykernel pyspark
 ```
+This will download several Python modules that takes size around 300 MB.
 
 ### Environment variables settings
 
@@ -200,16 +201,80 @@ First we set the environment variables for Hadoop and Spark.
    Set the the variable name to be `HADOOP_HOME` and its value
    "C:\Users\[your user name]\hadoop"
 
+   ```
+   Variable name: HADOOP_HOME
+   Variable value: C:\Users\[your user name]\HADOOP
+   ```
+
 4. Still in the same dialog windows when we are setting the environment
    variables for hadoop, create a new user variable again now with the 
    name and value
 
    ```
-   Variable name: `SPARK_HOME`
-   Variable value: `C:\Users\[your user name]\spark`
+   Variable name: SPARK_HOME
+   Variable value: C:\Users\[your user name]\spark
+   ```
+
+   And also for Python path we need to set it into our `learnPySpark` environment that is created using Miniconda. Set a new environment
+   variable with the following name and value
+
+   ```
+   Variable name: PYSPARK_PYTHON
+   Variable value: C:\Users\[your user name]\miniconda3\env\learnPySpark\python
    ```
 
 5. Now, we add these paths of `HADOOP_HOME` and `SPARK_HOME` 
    to the exsting `PATH` user variables. Click the `Path` and then
    click "Edit...". Click "New" and add `%HADOOP_HOME%\bin` and
    `%SPARK_HOME%\bin` into two separated rows.
+
+6. Now you can test that everything is working by opening again 
+   Anaconda Prompt (Miniconda 3) in the Start Menu and enter
+   the `learnPySpark` environment
+
+   ```
+   conda activate learnPySpark
+   pyspark
+   ```
+
+   If every steps above that you have followed are without problems,
+   you will get the following results
+
+   <img src="./img-resources/pyspark-console-welcome.png" width=400>   
+
+   The above image is a REPL pyspark console.
+   REPL stands for "Read Eval Print and Loop". This is a type of 
+   interaction that you can do with pyspark console through 
+   Miniconda 3 prompt.
+   Type the following command to test that your Spark  
+   is correctly installed
+
+   ```py
+   from pyspark.sql import SparkSession
+   spark = SparkSession.builder.getOrCreate()
+   ```
+
+   If everthings is correct, you will not have any error running 
+   the above two commmands lines.
+
+## Troubleshooting
+
+- Cannot run `conda` command in `Anaconda Prompt (Miniconda 3)`.
+  - User name has whitespace??
+  - Need to add the following path to `Path` environment variable??   
+    ```
+    C:\Users\<your user name>\miniconda3\Scripts
+    ```
+
+- Cannot run `pyspark` becaue of Java
+  - Reinstall Java 8??
+  - Path installation is wrong??
+  - Some steps are skipped??
+  - Need to add the following path to `Path` environment variable??   
+    ```
+    C:\Users\<your user name>\miniconda3\Scripts
+    ```
+
+- Cannot find `Edit the systems environment variables`
+  - Try the following steps??    
+    Control Panel > System > Advanced System Settings > Environment Variables

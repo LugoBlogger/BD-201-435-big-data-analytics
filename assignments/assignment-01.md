@@ -4,7 +4,7 @@
 Full name (Student ID Number)
 
 To solve the following problems, you need to download the 
-`list-of-students.csv` file from [here](s.itk.ac.id/AY2425BDADataAssg1). 
+`list-of-students.csv` file from [here](https://s.itk.ac.id/AY2425BDADataAssg1). 
 You can answer in English or Bahasa Indonesia.
 
 ## Problem 1

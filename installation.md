@@ -275,6 +275,8 @@ First we set the environment variables for Hadoop and Spark.
     C:\Users\<your user name>\miniconda3\Scripts
     ```
 
+  - https://medium.com/@dpk.bhtt/java-gateway-exited-java-gateway-process-exited-before-sending-its-port-number-eae90ccb990f
+
 - Cannot find `Edit the systems environment variables`
   - Try the following steps??    
     Control Panel > System > Advanced System Settings > Environment Variables

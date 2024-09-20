@@ -113,7 +113,6 @@ the other extensions follows the same procedures.
    purpose of this course
 
    ```
-   conda deactivate
    conda create --name learnPySpark python=3.11
    conda activate learnPySpark
    ```
@@ -203,7 +202,7 @@ First we set the environment variables for Hadoop and Spark.
 
    ```
    Variable name: HADOOP_HOME
-   Variable value: C:\Users\[your user name]\HADOOP
+   Variable value: C:\Users\[your user name]\hadoop
    ```
 
 4. Still in the same dialog windows when we are setting the environment
@@ -220,7 +219,7 @@ First we set the environment variables for Hadoop and Spark.
 
    ```
    Variable name: PYSPARK_PYTHON
-   Variable value: C:\Users\[your user name]\miniconda3\env\learnPySpark\python
+   Variable value: C:\Users\[your user name]\miniconda3\envs\learnPySpark\python
    ```
 
 5. Now, we add these paths of `HADOOP_HOME` and `SPARK_HOME` 

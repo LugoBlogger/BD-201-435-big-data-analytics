@@ -11,6 +11,16 @@ We use VSCode because it is more lightweight than using
 PyCharm or Spyder and it supports Jupyter Notebook with a full of ease
 using VSCode extension.
 
+## First thing you need to do
+1. Uninstall all Python's related program such as PyCharm, Anaconda, and
+   Python. There is a possibility that you have a Python program
+   that resides outside the Anaconda and Miniconda.
+
+2. To remove them, you can uninstall in "Add or Remove Program" menu.
+
+3. Please follow carefully all the steps. Most of the students missed
+   the step and made many typos in entering the commands.
+
 ## Python + VSCode + Jupyter Noteboook installation
 
 ### VSCode
@@ -265,8 +275,8 @@ First we set the environment variables for Hadoop and Spark.
     C:\Users\<your user name>\miniconda3\Scripts
     ```
 
-- Cannot run `pyspark` becaue of Java
-  - Reinstall Java 8??
+- Cannot run `pyspark` because of Java
+  - Reinstall Temurin OpenJDK Java 8??
   - Path installation is wrong??
   - Some steps are skipped??
   - Need to add the following path to `Path` environment variable??   
@@ -276,6 +286,12 @@ First we set the environment variables for Hadoop and Spark.
 
   - https://medium.com/@dpk.bhtt/java-gateway-exited-java-gateway-process-exited-before-sending-its-port-number-eae90ccb990f
 
+  - Missing C:\Windows\System32 in System Path??
+
 - Cannot find `Edit the systems environment variables`
   - Try the following steps??    
     Control Panel > System > Advanced System Settings > Environment Variables
+
+- Conda cannot activate automatically as a `base` environment 
+  when opening Anaconda Prompt (miniconda3).   
+  - Install miniconda3 with admin previlege (all users).

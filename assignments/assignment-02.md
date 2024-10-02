@@ -38,7 +38,11 @@ Your program must produce the result in the following format
 ```
 
 ### [Bonus point: 20]    
-Create a command prompt histogram
+Create a command prompt histogram where the number of the years of each actors is the number of `+` characters in the command
+prompt histogram. 
+
+Your histogram shoudl be like this
+
 ```bash
  actor_0 | +++++++++++++++++++
  actor_1 | +++++

@@ -7,7 +7,7 @@ To solve the following problems, you need to download the
 `list-of-students.csv` file from [here](https://s.itk.ac.id/AY2425BDADataAssg1). 
 You can answer in English or Bahasa Indonesia.
 
-## Problem 1
+## Problem 1 (70 points)
 Create a Jupyter notebook, as demonstrated in Week-03, to calculate the number 
 of letters in all students' names listed in `list-of-students.csv`. 
 Do not forget to remove any punctuation (such as periods) and spaces.
@@ -39,7 +39,7 @@ Write your code and include screenshots of your output table.
 
 Tuliskan kode kalian, dan ambil screenshot dari tabel yang dihasilkan.
 
-## Problem 2
+## Problem 2 (30 points)
 Now count how many students have names consisting of a single word,
 two words, three words, four words, five words, and six words.
 

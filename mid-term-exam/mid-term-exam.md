@@ -11,7 +11,7 @@ Recent discussions have raised questions about the accuracy and calculation
 methods of Indonesia's national inflation statistics. Comment by 
 Mr. Tito Karnavian during the "Anugrah Hari Statistik Nasional 2024" event 
 ([YouTube link](https://www.youtube.com/watch?v=J7CbaAtwab4), 
-from 1:52:16 to 1:55:00) and suspicious from economists reporeted in a 
+from 1:52:16 to 1:55:00) and suspicious from economists reported in a 
 [Bloomberg article](https://www.bloomberg.com/news/articles/2019-11-05/indonesia-s-steady-economic-growth-leaves-economists-puzzled)
 (you can open the link with the help of [Remove Paywall](https://www.removepaywall.com/)) 
 suggest potential discrepancies in the reported figures.
@@ -20,7 +20,7 @@ suggest potential discrepancies in the reported figures.
 
 ### 1. Data Collection
 
-- **Provincial Data**: Collect monthly inflation data for each province in  
+- **Provincial Data**: Collect monthly inflation data for each province in 
   Indonesia for all available years and montsh the data should be formatted
   as follows:   
 

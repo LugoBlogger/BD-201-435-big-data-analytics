@@ -1,4 +1,3 @@
-
 # Assignment 02
 
 Full name (Student ID Number)
